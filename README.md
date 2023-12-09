@@ -22,8 +22,11 @@ app.py (main Flask application)<br>
 templates/index.html (HTML file for the frontend)<br>
 static/style.css (CSS file for styling)<br>
 
-
+main form:
+----------
 ![image](https://github.com/PraneetBose/APOINTMENT-MANAGER/assets/94593299/c805df0a-6359-45d5-9bdb-26fca43d2320)
 
-
+edit form :
+---------
+![image](https://github.com/PraneetBose/APOINTMENT-MANAGER/assets/94593299/3ff88b49-38ea-4d2d-8553-120997a5e349)
 
