@@ -7,7 +7,9 @@ Installing
 **Python 3.8 or higher is required**
 
 To install the library , you can just run the following command:<br>
-python3 -b pip install Flask Flask-Mail
+<div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash"><span class="hljs-built_in">mkdir</span> flask_appointment_manager
+<span class="hljs-built_in">cd</span> flask_appointment_manager
+</code></div>
 
 
 PROGRAM FORMAT 
