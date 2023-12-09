@@ -7,13 +7,8 @@ Installing
 **Python 3.8 or higher is required**
 
 To install the library , you can just run the following command:<br>
-**python3 -m pip install Flask Flask-Mail**
+python3 -b pip install Flask Flask-Mail
 
-
-How to get started with ;-<br>
-------------------------
-To install the library , you can just run the following command:<br>
-python3 -m pip install Flask Flask-Mail
 
 PROGRAM FORMAT 
 --------------
