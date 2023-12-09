@@ -10,11 +10,11 @@ To install the library , you can just run the following command:<br>
 python3 -m pip install Flask Flask-Mail
 
 
-How to get started with ;-
-Inside the project folder, create the following files:
-app.py (main Flask application)
-templates/index.html (HTML file for the frontend)
-static/style.css (CSS file for styling)
+How to get started with ;-<br>
+Inside the project folder, create the following files:<br>
+app.py (main Flask application)<br>
+templates/index.html (HTML file for the frontend)<br>
+static/style.css (CSS file for styling)<br>
 
 
 ![image](https://github.com/PraneetBose/APOINTMENT-MANAGER/assets/94593299/c805df0a-6359-45d5-9bdb-26fca43d2320)
