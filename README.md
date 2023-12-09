@@ -11,6 +11,7 @@ python3 -m pip install Flask Flask-Mail
 
 
 How to get started with ;-<br>
+------------------------
 Inside the project folder, create the following files:<br>
 app.py (main Flask application)<br>
 templates/index.html (HTML file for the frontend)<br>
