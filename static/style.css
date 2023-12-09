@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /* Change to row to have the image and form side by side */
+    align-items: center; /* Center-align content horizontally */
+    scroll-behavior: auto;
+    justify-content: space-around; /* Space around the content */
+    height: 100vh; /* Set the height to the full viewport height */
+    position: relative; /* Position relative for pseudo-element positioning */
+    overflow: hidden; /* Hide overflow to prevent gradient overflow */
+}
+
+
+h1 {
+    text-align: center;
+    z-index: 2; /* Place the content above the pseudo-element */
+}
+
+
+form {
+    max-width: 1000px; /* Increase the max-width to make the form wider */
+    margin: 40px auto; /* Increase margin for spacing */
+    padding: 30px; /* Increase padding for more space inside the form */
+    /* Use a slim border with rounded edges */
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 20px rgba(148, 123, 182, 0.7); /* Purple glow effect with more intensity */
+    background-color:lightsteelblue; /* Dark grey background color for the form */
+    color: white; /* Text color for better visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items horizontally */
+    position: relative; /* Position relative for z-index stacking */
+    z-index: 2; /* Place the content above the pseudo-element */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+select,
+input {
+    width: 100%;
+    padding: 12px; /* Increase padding for larger input fields */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Round border for a round input box */
+}
+
+button {
+    background: linear-gradient(to right, #967bb6, #793f8e); /* Lavender-purple gradient */
+    color: white;
+    padding: 14px; /* Increase padding for a larger button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Increase font size for better visibility */
+    transition: background 0.3s; /* Add a transition for background color change */
+}
+
+/* Add animation on hover for the "Book Appointment" button */
+form button:hover {
+    background-position: right center; /* Change the background position on hover */
+}
+
+/* Animated buttons */
+.appointments li a {
+    display: inline-block;
+    padding: 12px; /* Increase padding for larger buttons */
+    margin-left: 10px;
+    color: mediumpurple;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.appointments li a:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.flash-message.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.flash-message.danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.upcoming-appointments {
+    max-width: 600px; /* Match the form's max-width for consistency */
+    margin: 20px auto;
+}
+
+.appointments {
+    list-style: none;
+    padding: 0;
+}
+
+.appointments li {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}

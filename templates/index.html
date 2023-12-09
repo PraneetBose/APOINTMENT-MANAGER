@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Appointment Manager</title>
+</head>
+<body>
+    <h1>URBAN COMPANY</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li class="flash-message {{ message[1] }}">{{ message[0] }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <h1>Appointment Manager</h1>
+
+    <form method="post" action="{{ url_for('book') }}">
+        <label for="service">Select Service:</label>
+        <select name="service" required>
+            <option value="healthcare">Healthcare</option>
+            <option value="spa">Spa</option>
+            <option value="salon">Salon</option>
+            <option value="haircut">Hair-Cut</option>
+            <option value="a/c repair ">A/C Repair</option>
+            <option value="Electronics repair ">Electronic repair</option>
+            <option value="full home cleaning ">Full Home Cleaning </option></select>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="date">Select Date:</label>
+        <input type="date" name="date" required>
+
+        <label for="time">Select Time:</label>
+        <input type="time" name="time" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required>
+
+
+
+        <button type="submit">Book Appointment</button>
+    </form>
+
+
+    <section class="upcoming-appointments">
+        <h2>Upcoming Appointments</h2>
+        {% if keyword %}
+            <p>Search results for '{{ keyword }}':</p>
+        {% endif %}
+        <ul class="appointments">
+            {% for appointment in appointments %}
+                <li>
+
+                    <span>{{ appointment['name'] }}</span>
+                    <span>{{ appointment['email'] }}</span>
+                    <span>{{ appointment['date'] }}</span>
+                    <a href="{{ url_for('delete', appointment_id=appointment['id']) }}">Delete</a>
+                    <a href="{{ url_for('edit', appointment_id=appointment['id']) }}">Edit</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <script>
+        // Smooth scroll to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
